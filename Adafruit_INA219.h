@@ -221,7 +221,6 @@ class Adafruit_INA219{
   float getCurrent_mA(void);
   float getPower_mW(void);
 
- private:
   TwoWire *_i2c;
 
   uint8_t ina219_i2caddr;
