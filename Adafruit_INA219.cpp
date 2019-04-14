@@ -517,3 +517,9 @@ float Adafruit_INA219::getPower_mW() {
   valueDec *= ina219_powerMultiplier_mW;
   return valueDec;
 }
+
+
+void Adafruit_INA219::setCalibrationCurrent(uint16_t config) {
+  wireWriteRegister(INA219_REG_CALIBRATION, ina219_calValue);
+  wireWriteRegister(INA219_REG_CONFIG, config);
+}
